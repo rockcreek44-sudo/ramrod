@@ -124,17 +124,22 @@ window.getCatches = getCatches;
 window.createCatch = createCatch;
 window.saveCatch = saveCatch;
 console.log("2° Baits app loaded");
-document.getElementById("saveCatch").addEventListener("click", function() {
-    const catchData = {
-        species: document.getElementById("species").value,
-        weight: document.getElementById("weight").value,
-        length: document.getElementById("length").value,
-        lure: document.getElementById("lure").value
-    };
+const saveButton = document.getElementById("saveCatch");
 
-    createCatch(catchData);
-    console.log(catchData);
-});
+if (saveButton) {
+    saveButton.addEventListener("click", function() {
+        const catchData = {
+            species: document.getElementById("species").value,
+            weight: document.getElementById("weight").value,
+            length: document.getElementById("length").value,
+            lure: document.getElementById("lure").value
+        };
+
+        createCatch(catchData);
+        console.log(catchData);
+    });
+}
 document.getElementById("enterButton").addEventListener("click", function() {
     window.location.href = "set-the-hook.html";
 });
+
