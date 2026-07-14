@@ -3,14 +3,117 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#050505">
     <title>2° Baits</title>
+
     <style>
-img{width:250px;height:auto;display:block;}
-</style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            min-height: 100%;
+            margin: 0;
+        }
+
+        body {
+            background:
+                radial-gradient(circle at top, #2a2a2a 0%, #111 38%, #050505 75%);
+            color: #ffffff;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .app-shell {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+        }
+
+        .home-screen {
+            width: 100%;
+            max-width: 440px;
+            text-align: center;
+        }
+
+        .logo {
+            display: block;
+            width: min(82vw, 340px);
+            height: auto;
+            margin: 0 auto 24px;
+            border-radius: 24px;
+            box-shadow:
+                0 0 30px rgba(255, 0, 0, 0.18),
+                0 18px 45px rgba(0, 0, 0, 0.7);
+        }
+
+        h1 {
+            margin: 0;
+            font-size: clamp(2.2rem, 10vw, 3.5rem);
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+        }
+
+        .tagline {
+            margin: 10px 0 34px;
+            color: #d7d7d7;
+            font-size: 0.95rem;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+        }
+
+        .enter-button {
+            width: 100%;
+            min-height: 58px;
+            border: 1px solid #ff3b3b;
+            border-radius: 14px;
+            background: linear-gradient(180deg, #ef1717, #a90000);
+            color: #ffffff;
+            font-size: 1.1rem;
+            font-weight: 900;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            cursor: pointer;
+            box-shadow:
+                0 8px 24px rgba(190, 0, 0, 0.35),
+                inset 0 1px 0 rgba(255, 255, 255, 0.25);
+        }
+
+        .enter-button:hover {
+            background: linear-gradient(180deg, #ff2525, #c00000);
+        }
+
+        .enter-button:active {
+            transform: translateY(1px);
+        }
+
+        .footer-text {
+            margin-top: 26px;
+            color: #777777;
+            font-size: 0.75rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+    </style>
 </head>
+
 <body>
-    <img src="logo.png" alt="2° Baits Logo">
-    <h1>2° Baits</h1>
-    <p>Built on the Water</p>
+    <main class="app-shell">
+        <section class="home-screen">
+            <img class="logo" src="logo.png" alt="2° Baits logo">
+
+            <h1>2° Baits</h1>
+            <p class="tagline">Built on the Water</p>
+
+            <button class="enter-button" type="button">
+                Enter
+            </button>
+
+            <p class="footer-text">Fishing Logbook</p>
+        </section>
+    </main>
 </body>
 </html>
