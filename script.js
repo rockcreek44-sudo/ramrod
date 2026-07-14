@@ -135,3 +135,6 @@ document.getElementById("saveCatch").addEventListener("click", function() {
     createCatch(catchData);
     console.log(catchData);
 });
+document.getElementById("enterButton").addEventListener("click", function() {
+    window.location.href = "set-the-hook.html";
+});
