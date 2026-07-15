@@ -41,7 +41,24 @@ select {
     font-size: 1rem;
 }
 
+.field-card {
+    margin-bottom: 22px;
+    padding: 14px;
+    border: 2px solid #b8b8b8;
+    border-radius: 10px;
+    background:
+        linear-gradient(135deg, transparent 40%, rgba(255,255,255,0.16) 41%, rgba(255,255,255,0.16) 59%, transparent 60%),
+        linear-gradient(45deg, transparent 40%, rgba(0,0,0,0.35) 41%, rgba(0,0,0,0.35) 59%, transparent 60%),
+        linear-gradient(180deg, #9a9a9a, #4a4a4a);
+    background-size: 22px 22px;
+}
 
+.field-card p {
+    margin: 0 0 8px;
+    color: #111111;
+    font-weight: 900;
+    text-transform: uppercase;
+}
 .logo {
     display: block;
     width: min(82vw, 340px);
