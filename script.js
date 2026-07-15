@@ -143,7 +143,7 @@ const enterButton = document.getElementById("enterButton");
 
 if (enterButton) {
     enterButton.addEventListener("click", function() {
-        window.location.href = "set-the-hook.html";
+        window.location.href = "dashboard.html";
     });
 }
 
