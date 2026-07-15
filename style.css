@@ -41,14 +41,7 @@ select {
     font-size: 1rem;
 }
 
-.field-header {
-    margin: 0 0 10px;
-    padding-left: 12px;
-    border-left: 4px solid #e00000;
-    color: #c8c8c8;
-    font-size: 1rem;
-    font-weight: 700;
-}
+
 .logo {
     display: block;
     width: min(82vw, 340px);
