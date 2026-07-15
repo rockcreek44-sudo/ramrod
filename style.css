@@ -42,13 +42,12 @@ select {
 }
 
 .field-header {
-    margin: 0 0 8px;
-    padding: 4px 0 7px;
-    border-bottom: 3px solid #e00000;
+    margin: 0 0 10px;
+    padding-left: 12px;
+    border-left: 4px solid #e00000;
     color: #c8c8c8;
-    font-weight: 900;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 700;
 }
 .logo {
     display: block;
