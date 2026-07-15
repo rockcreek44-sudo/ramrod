@@ -41,6 +41,17 @@ select {
     font-size: 1rem;
 }
 
+.field-header {
+    margin: 0 0 10px;
+    padding: 9px 12px;
+    border-left: 5px solid #e00000;
+    border-bottom: 1px solid #8a8a8a;
+    background: linear-gradient(90deg, #d7d7d7 0%, #8f8f8f 55%, #2a2a2a 100%);
+    color: #111111;
+    font-weight: 900;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
 .logo {
     display: block;
     width: min(82vw, 340px);
