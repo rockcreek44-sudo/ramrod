@@ -1,4 +1,4 @@
-* {
+{
     box-sizing: border-box;
 }
 
@@ -40,7 +40,16 @@ select {
     color: #ffffff;
     font-size: 1rem;
 }
-
+.field-card {
+    margin: 12px 0;
+    padding: 16px 16px 10px;
+    border: 1px solid #7a7a7a;
+    border-radius: 14px;
+    background: linear-gradient(180deg, #3a3a3a 0%, #242424 100%);
+    box-shadow:
+        0 0 0 1px rgba(255, 255, 255, 0.04) inset,
+        0 0 18px rgba(190, 0, 0, 0.16);
+}
 .logo {
     display: block;
     width: min(82vw, 340px);
