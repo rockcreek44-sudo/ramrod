@@ -139,7 +139,11 @@ if (saveButton) {
         console.log(catchData);
     });
 }
-document.getElementById("enterButton").addEventListener("click", function() {
-    window.location.href = "set-the-hook.html";
-});
+const enterButton = document.getElementById("enterButton");
+
+if (enterButton) {
+    enterButton.addEventListener("click", function() {
+        window.location.href = "set-the-hook.html";
+    });
+}
 
