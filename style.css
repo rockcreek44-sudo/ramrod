@@ -59,10 +59,10 @@ select {
     font-weight: 1000;
     text-transform: uppercase;
     letter-spacing: 0.12em;
-    text-shadow:
-2px 2px 0 #000000,
--1px -1px 0 #ffffff,
-0 4px 8px #000000;
+text-shadow:
+    0 2px 0 #5a0000,
+    0 4px 0 #220000,
+    0 6px 10px #000000;
 }
 .logo {
     display: block;
