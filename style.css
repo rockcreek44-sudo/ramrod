@@ -33,7 +33,7 @@ transform-origin: center top;
 }
 
 select {
-   width: 110%;
+   width: 100%;
     min-height: 56px;
     margin: 6px 0 10px;
     padding: 0 14px;
