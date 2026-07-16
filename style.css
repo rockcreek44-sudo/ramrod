@@ -59,7 +59,7 @@ select {
     display: inline-block;
     margin: 0 0 6px;
     padding: 6px 14px;
-font-family: "Brushstrike", sans-serif;
+font-family: "Brushstrike" !important;
     font-size: 2rem;
 font-weight: 1000;
 text-transform: uppercase;
