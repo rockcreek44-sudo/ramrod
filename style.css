@@ -2,7 +2,10 @@
   font-family: "Brushstrike";
   src: url("fonts/Brushstrike.ttf") format("truetype");
 }
-
+@font-face {
+    font-family: "BadBrush";
+    src: url("fonts/BadBrush.ttf") format("truetype");
+}
 * {
     box-sizing: border-box;
 }
