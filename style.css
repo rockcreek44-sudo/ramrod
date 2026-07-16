@@ -1,4 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+@font-face {
+  font-family: "Brushstrike";
+  src: url("fonts/Brushstrike.ttf") format("truetype");
+}
 
 * {
     box-sizing: border-box;
@@ -56,8 +59,8 @@ select {
     display: inline-block;
     margin: 0 0 6px;
     padding: 6px 14px;
-    font-family: "Bangers", cursive;
-font-size: 2rem;
+font-family: "Brushstrike", sans-serif;
+    font-size: 2rem;
 font-weight: 1000;
 text-transform: uppercase;
 letter-spacing: 0.12em;
