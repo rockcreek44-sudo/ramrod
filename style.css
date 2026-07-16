@@ -1,11 +1,4 @@
-@font-face {
-  font-family: "Brushstrike";
-  src: url("fonts/Brushstrike.ttf") format("truetype");
-}
-@font-face {
-    font-family: "RAMRODBrush";
-    src: url("fonts/BadBrush.ttf") format("truetype");
-}
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
 * {
     box-sizing: border-box;
 }
@@ -62,7 +55,7 @@ select {
     display: inline-block;
     margin: 0 0 6px;
     padding: 6px 14px;
-font-family: "RAMRODBrush" !important;
+font-family: "Bangers", cursive;
   
     font-size: 2rem;
 font-weight: 1000;
