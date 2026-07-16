@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Road+Rage&display=swap');
-{
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');{
     box-sizing: border-box;
 }
 
@@ -55,8 +54,7 @@ select {
     display: inline-block;
     margin: 0 0 6px;
     padding: 6px 14px;
-    font-family: "Road Rage", sans-serif;
-    font-size: 2rem;
+    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
     font-weight: 1000;
     text-transform: uppercase;
     letter-spacing: 0.08em;
