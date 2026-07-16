@@ -51,18 +51,14 @@ select {
 .field-card p {
     display: inline-block;
     margin: 0 0 10px;
-    padding: 10px 18px;
-    border: 2px solid #b8b8b8;
-    border-radius: 10px;
-    background:
-        linear-gradient(135deg, rgba(255,255,255,0.34) 0 25%, transparent 25% 50%, rgba(255,255,255,0.16) 50% 75%, transparent 75% 100%),
-        linear-gradient(315deg, rgba(0,0,0,0.28) 0 25%, transparent 25% 50%, rgba(0,0,0,0.12) 50% 75%, transparent 75% 100%),
-        linear-gradient(180deg, #cfcfcf 0%, #8d8d8d 50%, #5a5a5a 100%);
-    background-size: 24px 24px;
-    color: #d10000;
+    padding: 6px 14px;
+    color: #d00000;
     font-weight: 900;
     text-transform: uppercase;
-    letter-spacing: 0.06em;
+    letter-spacing: 0.08em;
+    text-shadow:
+        0 1px 0 #ffffff,
+        0 0 4px #000000;
 }
 .logo {
     display: block;
