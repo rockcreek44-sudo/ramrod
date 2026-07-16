@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-* {
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');* {
     box-sizing: border-box;
 }
 
@@ -55,7 +54,7 @@ select {
     display: inline-block;
     margin: 0 0 6px;
     padding: 6px 14px;
-    font-family: "Black Ops One", sans-serif;
+    font-family: "Black Han Sans", sans-serif;
 font-size: 2rem;
 font-weight: 1000;
 text-transform: uppercase;
