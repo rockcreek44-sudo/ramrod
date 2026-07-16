@@ -59,6 +59,8 @@ select {
     text-transform: uppercase;
     letter-spacing: 0.12em;
     text-shadow:
+    1px 1px 0 #ffffff,
+    0 2px 3px #000000;
         1px 1px 0 #c0c0c0,
         0 0 4px #000000;
 }
