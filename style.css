@@ -93,7 +93,7 @@ h1 {
 
 .enter-button {
     width: 100%;
-    min-height: 58px;
+    min-height: 72px;
     border: 1px solid #ff3b3b;
     border-radius: 14px;
     background: linear-gradient(180deg, #ef1717, #a90000);
