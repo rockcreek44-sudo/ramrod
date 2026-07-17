@@ -165,6 +165,21 @@ if (totalFishElement) {
   totalFishElement.textContent = catches.length;
 }
 
+const biggestFishElement = document.getElementById("biggestFish");
+
+if (biggestFishElement && catches.length > 0) {
+  const biggestFish = catches.reduce((biggest, current) => {
+    return parseFloat(current.weight) > parseFloat(biggest.weight)
+      ? current
+      : biggest;
+  });
+
+  biggestFishElement.innerHTML =
+    biggestFish.species + "<br>" +
+    biggestFish.weight + "<br>" +
+    biggestFish.length + "<br>" +
+    biggestFish.lure;
+}
 
 const enterButton = document.getElementById("enterButton");
 
