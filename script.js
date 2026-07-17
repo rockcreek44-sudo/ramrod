@@ -165,7 +165,7 @@ if (totalFishElement) {
   totalFishElement.textContent = catches.length;
 }
 
-}
+
 const enterButton = document.getElementById("enterButton");
 
 if (enterButton) {
