@@ -169,11 +169,14 @@ const biggestFishElement = document.getElementById("biggestFish");
 
 if (biggestFishElement && catches.length > 0) {
   const biggestFish = catches.reduce((biggest, current) => {
-    return parseFloat(current.weight) > parseFloat(biggest.weight)
-      ? current
-      : biggest;
-  });
+  const biggestWeight = parseFloat(biggest.weight);
+  const currentWeight = parseFloat(current.weight);
 
+  if (Number.isNaN(biggestWeight)) return current;
+  if (Number.isNaN(currentWeight)) return biggest;
+
+  return currentWeight > biggestWeight ? current : biggest;
+});
   biggestFishElement.innerHTML =
     biggestFish.species + "<br>" +
     biggestFish.weight + "<br>" +
