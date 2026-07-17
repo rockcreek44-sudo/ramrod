@@ -51,7 +51,7 @@ select {
     border: none;
 }
 
-.field-card p {
+.field-card p, .field-label {
     display: inline-block;
     margin: 0 0 6px;
     padding: 6px 14px;
