@@ -132,3 +132,19 @@ h1 {
     letter-spacing: 0.1em;
     text-transform: uppercase;
 }
+
+.about-page {
+    flex-direction: column;
+    max-width: 700px;
+    text-align: center;
+    gap: 24px;
+}
+
+.about-page p {
+    margin: 0;
+    line-height: 1.6;
+}
+
+.about-page .tagline {
+    margin: 0;
+}
