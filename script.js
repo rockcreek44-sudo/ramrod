@@ -159,6 +159,13 @@ if (lastCatchElement && catches.length > 0) {
     lastCatch.length + "<br>" +
     lastCatch.lure;
 }
+    const totalFishElement = document.getElementById("totalFish");
+
+if (totalFishElement) {
+  totalFishElement.textContent = catches.length;
+}
+
+}
 const enterButton = document.getElementById("enterButton");
 
 if (enterButton) {
