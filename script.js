@@ -135,7 +135,15 @@ if (saveButton) {
             lure: document.getElementById("lure").value
         };
 
-        createCatch(catchData);
+        if (
+  catchData.species === "Select Species" ||
+  catchData.weight === "Select Weight" ||
+  catchData.length === "Select Length" ||
+  catchData.lure === "Select Lure"
+) {
+  alert("Select all four fields before saving.");
+  return;
+}
         console.log(catchData);
     });
 }
