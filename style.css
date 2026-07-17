@@ -44,6 +44,11 @@ select {
     font-size: 1rem;
 }
 
+select option {
+  background: #121212;
+  color: #ffffff;
+}
+
 .field-card {
     margin-bottom: 14px;
     padding: 0;
