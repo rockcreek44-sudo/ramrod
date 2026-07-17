@@ -13,7 +13,7 @@
       <p class="field-label">SETTINGS</p>
       <p class="tagline">Manage your catches.</p>
 
-      <button class="enter-button" type="button">
+      <button class="enter-button" type="button"> onclick="if(confirm('Are you sure? This will delete all catches.')){localStorage.removeItem('ramrodCatches');window.location.href='my-catches.html';}"
         CLEAR ALL CATCHES
       </button>
 
