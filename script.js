@@ -144,6 +144,7 @@ if (saveButton) {
   alert("Select all four fields before saving.");
   return;
 }
+        createCatch(catchData);
         console.log(catchData);
     });
 }
