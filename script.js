@@ -139,6 +139,17 @@ if (saveButton) {
         console.log(catchData);
     });
 }
+const lastCatchElement = document.getElementById("lastCatch");
+
+if (lastCatchElement && catches.length > 0) {
+  const lastCatch = catches[catches.length - 1];
+
+  lastCatchElement.innerHTML =
+    lastCatch.species + "<br>" +
+    lastCatch.weight + "<br>" +
+    lastCatch.length + "<br>" +
+    lastCatch.lure;
+}
 const enterButton = document.getElementById("enterButton");
 
 if (enterButton) {
