@@ -189,16 +189,20 @@ if (topLureElement && catches.length > 0) {
     const lureCounts = {};
 
     catches.forEach((catchData) => {
-        if (catchData.lure) {
+        if (catchData.lure && catchData.lure !== "Select Lure") {
             lureCounts[catchData.lure] = (lureCounts[catchData.lure] || 0) + 1;
         }
     });
 
-    const topLure = Object.keys(lureCounts).reduce((top, lure) =>
+    const lureNames = Object.keys(lureCounts);
+
+if (lureNames.length > 0) {
+    const topLure = lureNames.reduce((top, lure) =>
         lureCounts[lure] > lureCounts[top] ? lure : top
     );
 
     topLureElement.textContent = topLure + " — " + lureCounts[topLure] + " fish";
+}
 }
 const enterButton = document.getElementById("enterButton");
 
