@@ -183,7 +183,23 @@ if (biggestFishElement && catches.length > 0) {
     biggestFish.length + "<br>" +
     biggestFish.lure;
 }
+const topLureElement = document.getElementById("topLure");
 
+if (topLureElement && catches.length > 0) {
+    const lureCounts = {};
+
+    catches.forEach((catchData) => {
+        if (catchData.lure) {
+            lureCounts[catchData.lure] = (lureCounts[catchData.lure] || 0) + 1;
+        }
+    });
+
+    const topLure = Object.keys(lureCounts).reduce((top, lure) =>
+        lureCounts[lure] > lureCounts[top] ? lure : top
+    );
+
+    topLureElement.textContent = topLure + " — " + lureCounts[topLure] + " fish";
+}
 const enterButton = document.getElementById("enterButton");
 
 if (enterButton) {
