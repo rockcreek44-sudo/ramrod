@@ -162,7 +162,14 @@ if (lastCatchElement && catches.length > 0) {
     const totalFishElement = document.getElementById("totalFish");
 
 if (totalFishElement) {
-  totalFishElement.textContent = catches.length;
+  const validCatches = catches.filter(catch =>
+    catch.species && catch.species !== "Select Species" &&
+    catch.weight && catch.weight !== "Select Weight" &&
+    catch.length && catch.length !== "Select Length" &&
+    catch.lure && catch.lure !== "Select Lure"
+  );
+
+  totalFishElement.textContent = validCatches.length;
 }
 
 const biggestFishElement = document.getElementById("biggestFish");
