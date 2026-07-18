@@ -204,6 +204,29 @@ if (lureNames.length > 0) {
     topLureElement.textContent = topLure + " — " + lureCounts[topLure] + " fish";
 }
 }
+const topSpeciesElement = document.getElementById("topSpecies");
+
+if (topSpeciesElement && catches.length > 0) {
+    const speciesCounts = {};
+
+    catches.forEach((catchData) => {
+        if (catchData.species && catchData.species !== "Select Species") {
+            speciesCounts[catchData.species] = (speciesCounts[catchData.species] || 0) + 1;
+        }
+    });
+
+    const speciesNames = Object.keys(speciesCounts);
+
+    if (speciesNames.length > 0) {
+        const topSpecies = speciesNames.reduce((top, species) =>
+            speciesCounts[species] > speciesCounts[top] ? species : top
+        );
+
+        topSpeciesElement.textContent =
+            topSpecies + " — " + speciesCounts[topSpecies] + " fish";
+    }
+}
+
 const enterButton = document.getElementById("enterButton");
 
 if (enterButton) {
