@@ -140,19 +140,22 @@ const saveButton = document.getElementById("saveCatch");
 if (saveButton) {
     saveButton.addEventListener("click", function() {
         const catchData = {
-            species: document.getElementById("species").value,
-            weight: document.getElementById("weight").value,
-            length: document.getElementById("length").value,
-            lure: document.getElementById("lure").value
+           species: document.getElementById("species").value,
+weight: document.getElementById("weight").value,
+length: document.getElementById("length").value,
+waterTemp: document.getElementById("waterTemp").value,
+lure: document.getElementById("lure").value
         };
 
         if (
   catchData.species === "Select Species" ||
   catchData.weight === "Select Weight" ||
-  catchData.length === "Select Length" ||
-  catchData.lure === "Select Lure"
+ catchData.length === "Select Length" ||
+catchData.waterTemp === "Select Water Temp" ||
+catchData.lure === "Select Lure"
+ 
 ) {
-  alert("Select all four fields before saving.");
+  alert("Select all five fields before saving.");
   return;
 }
         createCatch(catchData);
