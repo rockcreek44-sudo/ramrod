@@ -146,6 +146,7 @@ if (saveButton) {
 }
         createCatch(catchData);
         console.log(catchData);
+        window.location.href = "my-catches.html";
     });
 }
 const lastCatchElement = document.getElementById("lastCatch");
