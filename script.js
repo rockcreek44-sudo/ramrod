@@ -51,6 +51,16 @@ const LENGTHS = [
     '29"',
     '30"+'
 ];
+
+const WATER_TEMPS = [
+    "<40°F",
+    "40–49°F",
+    "50–59°F",
+    "60–69°F",
+    "70–79°F",
+    "80–89°F",
+    "90°F+"
+];
 const WEATHER = [
     "Sunny",
     "Partly Cloudy",
