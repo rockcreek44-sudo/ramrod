@@ -145,6 +145,7 @@ weight: document.getElementById("weight").value,
 length: document.getElementById("length").value,
 waterTemp: document.getElementById("waterTemp").value,
 waterClarity: document.getElementById("waterClarity").value,
+            weather: document.getElementById("weather").value,
         lure: document.getElementById("lure").value
         };
 
@@ -154,7 +155,8 @@ waterClarity: document.getElementById("waterClarity").value,
  catchData.length === "Select Length" ||
 catchData.waterTemp === "Select Water Temp" ||
 catchData.lure === "Select Lure" ||
-catchData.waterClarity === "Select Water Clarity"
+catchData.weather === "Select Weather" ||
+            catchData.waterClarity === "Select Water Clarity"
  
 ) {
   alert("Select all six fields before saving.");
