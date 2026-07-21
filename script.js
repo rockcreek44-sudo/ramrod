@@ -155,7 +155,8 @@ const lastCatchElement = document.getElementById("lastCatch");
 if (lastCatchElement && catches.length > 0) {
   const lastCatch = catches[catches.length - 1];
 
-  lastCatchElement.innerHTML =
+ lastCatchElement.innerHTML =
+    (lastCatch.dateCaught ? lastCatch.dateCaught + "<br><br>" : "") +
     lastCatch.species + "<br>" +
     lastCatch.weight + "<br>" +
     lastCatch.length + "<br>" +
