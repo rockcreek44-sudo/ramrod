@@ -112,7 +112,8 @@ loadCatches();
 function createCatch(data) {
     const newCatch = {
         ...data,
-        id: Date.now()
+        id: Date.now(),
+dateCaught: new Date().toLocaleString()
     };
 
     saveCatch(newCatch);
