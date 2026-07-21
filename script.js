@@ -175,7 +175,8 @@ if (lastCatchElement && catches.length > 0) {
     lastCatch.species + "<br>" +
     lastCatch.weight + "<br>" +
     lastCatch.length + "<br>" +
-    lastCatch.waterTemp + "<br>" + lastCatch.lure;
+    lastCatch.waterTemp + "<br>" +
+lastCatch.waterClarity + "<br>" + lastCatch.lure;
 }
     const totalFishElement = document.getElementById("totalFish");
 
