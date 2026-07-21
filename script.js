@@ -185,8 +185,10 @@ if (totalFishElement) {
     catchItem.species && catchItem.species !== "Select Species" &&
     catchItem.weight && catchItem.weight !== "Select Weight" &&
     catchItem.length && catchItem.length !== "Select Length" &&
-    catchItem.lure && catchItem.lure !== "Select Lure"
-);
+    catchItem.waterTemp && catchItem.waterTemp !== "Select Water Temp" &&
+catchItem.waterClarity && catchItem.waterClarity !== "Select Water Clarity" &&
+catchItem.lure && catchItem.lure !== "Select Lure"
+                                     );
   
 
   totalFishElement.textContent = validCatches.length;
