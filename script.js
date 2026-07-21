@@ -163,12 +163,13 @@ if (lastCatchElement && catches.length > 0) {
     const totalFishElement = document.getElementById("totalFish");
 
 if (totalFishElement) {
-  const validCatches = catches.filter(catch =>
-    catch.species && catch.species !== "Select Species" &&
-    catch.weight && catch.weight !== "Select Weight" &&
-    catch.length && catch.length !== "Select Length" &&
-    catch.lure && catch.lure !== "Select Lure"
-  );
+  const validCatches = catches.filter(catchItem =>
+    catchItem.species && catchItem.species !== "Select Species" &&
+    catchItem.weight && catchItem.weight !== "Select Weight" &&
+    catchItem.length && catchItem.length !== "Select Length" &&
+    catchItem.lure && catchItem.lure !== "Select Lure"
+);
+  
 
   totalFishElement.textContent = validCatches.length;
 }
