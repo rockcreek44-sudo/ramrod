@@ -159,7 +159,7 @@ catchData.weather === "Select Weather" ||
             catchData.waterClarity === "Select Water Clarity"
  
 ) {
-  alert("Select all six fields before saving.");
+  alert("Select all fields before saving.");
   return;
 }
         createCatch(catchData);
