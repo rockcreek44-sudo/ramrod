@@ -177,12 +177,11 @@ if (lastCatchElement && catches.length > 0) {
  lastCatchElement.innerHTML =
     (lastCatch.dateCaught ? lastCatch.dateCaught + "<br><br>" : "") +
     lastCatch.species + "<br>" +
-    lastCatch.weight + "<br>" +
-    lastCatch.length + "<br>" +
-    lastCatch.waterTemp + "<br>" +
-    lastCatch.wind + "<br>" +
-    lastCatch.weather + "<br>" +
-    lastCatch.waterClarity + "<br>" + lastCatch.lure;
+lastCatch.weight + " | " + lastCatch.length + "<br><br>" +
+lastCatch.waterTemp + "<br>" +
+lastCatch.wind + " | " + lastCatch.weather + "<br>" +
+lastCatch.waterClarity + "<br><br>" +
+lastCatch.lure;
 }
     const totalFishElement = document.getElementById("totalFish");
 
