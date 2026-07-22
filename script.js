@@ -180,7 +180,7 @@ if (lastCatchElement && catches.length > 0) {
 lastCatch.weight + " | " + lastCatch.length + "<br><br>" +
 lastCatch.waterTemp + "<br>" +
 lastCatch.wind + " | " + lastCatch.weather + "<br>" +
-lastCatch.waterClarity + "<br><br>" +
+lastCatch.waterClarity + "<br>" +
 lastCatch.lure;
 }
     const totalFishElement = document.getElementById("totalFish");
