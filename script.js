@@ -213,7 +213,8 @@ if (biggestFishElement && catches.length > 0) {
     biggestFish.species + "<br>" +
     biggestFish.weight + "<br>" +
     biggestFish.length + "<br>" +
-    biggestFish.lure;
+    biggestFish.weather + "<br>" +
+      biggestFish.lure;
 }
 const topLureElement = document.getElementById("topLure");
 
