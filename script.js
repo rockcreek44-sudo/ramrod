@@ -7,6 +7,7 @@ const LURES = [
     "Heavy Cover Mini",
     "Karashi",
     "Swim Jig",
+    "Ned Rig",
     "Other"
 ];
 const SPECIES = [
