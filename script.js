@@ -262,6 +262,18 @@ if (topSpeciesElement && catches.length > 0) {
     }
 }
 
+const recentCatchesElement = document.getElementById("recentCatches");
+
+if (recentCatchesElement && catches.length > 0) {
+    const recentCatches = catches.slice(-5).reverse();
+
+    recentCatchesElement.innerHTML = recentCatches.map((catchData) =>
+        (catchData.dateCaught ? catchData.dateCaught + "<br>" : "") +
+        catchData.species + "<br>" +
+        catchData.weight + " | " + catchData.length + "<br>" +
+        catchData.lure + "<br><br>"
+    ).join("");
+}
 const enterButton = document.getElementById("enterButton");
 
 if (enterButton) {
