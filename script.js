@@ -157,6 +157,7 @@ waterClarity: document.getElementById("waterClarity").value,
 catchData.waterTemp === "Select Water Temp" ||
 catchData.lure === "Select Lure" ||
 catchData.weather === "Select Weather" ||
+            catchData.wind === "Select Wind" ||
             catchData.waterClarity === "Select Water Clarity"
  
 ) {
