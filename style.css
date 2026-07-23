@@ -90,9 +90,10 @@ h1 {
     letter-spacing: 0.04em;
     text-transform: uppercase;
         font-weight: 900;
-    text-shadow:
+text-shadow:
     3px 3px 0 #7a0000,
-    0 4px 10px #000000;
+    6px 6px 0 #300000,
+    0 10px 18px #000000;
         
 }
 
