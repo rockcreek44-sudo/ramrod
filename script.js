@@ -1,13 +1,18 @@
 // 2° Baits App JavaScript
 const catches = [];
 const LURES = [
-    "Workhorse",
-    "Mini",
-    "Heavy Cover Workhorse",
-    "Heavy Cover Mini",
-    "Karashi",
+    "Bladed Jig",
+    "Heavy Cover Bladed Jig",
+    "Mini Bladed Jig",
+    "Finesse Jig",
     "Swim Jig",
+    "Texas Rig",
+    "Flipping Jig",
     "Ned Rig",
+    "Drop Shot",
+    "Neko Rig",
+    "Walking Bait",
+    "Plopper",
     "Other"
 ];
 const SPECIES = [
