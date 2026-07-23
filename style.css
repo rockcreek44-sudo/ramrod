@@ -85,7 +85,8 @@ text-shadow:
 }
 
 h1 {
-    margin: 0;
+    color: #f2f2f2;
+margin: 0;
     font-size: clamp(2.2rem, 10vw, 3.5rem);
     letter-spacing: 0.04em;
     text-transform: uppercase;
