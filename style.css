@@ -105,6 +105,14 @@ text-shadow:
     gap: 0.18em;
 }
 
+.title-degree {
+    transform: translateY(14px) rotate(-8deg);
+}
+
+.title-words {
+    transform: translateY(-8px);
+}
+
 h2 {
     font-family: "Bangers", cursive;
     font-size: 2.2rem;
