@@ -197,7 +197,9 @@ lastCatch.waterTemp + "<br>" +
 lastCatch.wind + " | " + lastCatch.weather + "<br>" +
 lastCatch.waterClarity + "<br>" +
 lastCatch.lure + "<br><br>" +
-"GPS: " + lastCatch.latitude + ", " + lastCatch.longitude;
+'<a href="https://www.google.com/maps?q=' +
+lastCatch.latitude + "," + lastCatch.longitude +
+'" target="_blank">VIEW ON MAP</a>';
 }
     const totalFishElement = document.getElementById("totalFish");
 
