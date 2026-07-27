@@ -111,6 +111,7 @@ const FISH_STAGE = [
     "Winter"
 ];
 const STORAGE_KEY = "twoDegreeBaitsCatches";
+let fishingLocation = null;
 function saveCatch(catchData) {
     catches.push(catchData);
     localStorage.setItem(STORAGE_KEY, JSON.stringify(catches));
@@ -142,6 +143,13 @@ window.createCatch = createCatch;
 window.saveCatch = saveCatch;
 console.log("2° Baits app loaded");
 const saveButton = document.getElementById("saveCatch");
+
+navigator.geolocation.getCurrentPosition(function(position) {
+    fishingLocation = {
+        latitude: position.coords.latitude,
+        longitude: position.coords.longitude
+    };
+});
 
 if (saveButton) {
     saveButton.addEventListener("click", function() {
