@@ -196,7 +196,8 @@ lastCatch.weight + " | " + lastCatch.length + "<br><br>" +
 lastCatch.waterTemp + "<br>" +
 lastCatch.wind + " | " + lastCatch.weather + "<br>" +
 lastCatch.waterClarity + "<br>" +
-lastCatch.lure;
+lastCatch.lure + "<br><br>" +
+"GPS: " + lastCatch.latitude + ", " + lastCatch.longitude;
 }
     const totalFishElement = document.getElementById("totalFish");
 
