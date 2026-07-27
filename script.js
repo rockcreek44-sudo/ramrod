@@ -180,17 +180,16 @@ catchData.weather === "Select Weather" ||
   alert("Select all fields before saving.");
   return;
 }
-        navigator.geolocation.getCurrentPosition(function(position) {
-    catchData.latitude = position.coords.latitude;
-    catchData.longitude = position.coords.longitude;
+       if (fishingLocation) {
+    catchData.latitude = fishingLocation.latitude;
+    catchData.longitude = fishingLocation.longitude;
 
     createCatch(catchData);
     console.log(catchData);
     window.location.href = "my-catches.html";
-}, function() {
+} else {
     alert("RAMROD needs location access to save this catch.");
-});
-    });
+}
 }
 const lastCatchElement = document.getElementById("lastCatch");
 
