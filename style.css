@@ -110,7 +110,7 @@ text-shadow:
 }
 
 .title-words {
-    transform: translateY(-8px);
+    transform: translateY(-18px) rotate(3deg) scale(1.08);
 }
 
 h2 {
