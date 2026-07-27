@@ -180,17 +180,13 @@ catchData.weather === "Select Weather" ||
   alert("Select all fields before saving.");
   return;
 }
-       if (fishingLocation) {
-    catchData.latitude = fishingLocation.latitude;
-    catchData.longitude = fishingLocation.longitude;
+       catchData.latitude = fishingLocation ? fishingLocation.latitude : null;
+catchData.longitude = fishingLocation ? fishingLocation.longitude : null;
 
-    createCatch(catchData);
-    console.log(catchData);
-    window.location.href = "my-catches.html";
-} else {
-    alert("RAMROD needs location access to save this catch.");
-}
-}
+createCatch(catchData);
+console.log(catchData);
+window.location.href = "my-catches.html";
+
 const lastCatchElement = document.getElementById("lastCatch");
 
 if (lastCatchElement && catches.length > 0) {
