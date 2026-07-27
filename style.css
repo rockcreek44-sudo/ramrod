@@ -178,3 +178,8 @@ h2 {
 .about-page .tagline {
     margin: 0;
 }
+
+.about-closing {
+    font-size: 1.15rem;
+    letter-spacing: 0.08em;
+}
