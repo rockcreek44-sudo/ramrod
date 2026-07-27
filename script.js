@@ -153,7 +153,9 @@ waterTemp: document.getElementById("waterTemp").value,
 waterClarity: document.getElementById("waterClarity").value,
             weather: document.getElementById("weather").value,
             wind: document.getElementById("wind").value,
-        lure: document.getElementById("lure").value
+        lure: document.getElementById("lure").value,
+            latitude: null,
+longitude: null,
         };
 
         if (
