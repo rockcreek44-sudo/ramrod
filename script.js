@@ -175,9 +175,7 @@ catchData.weather === "Select Weather" ||
   alert("Select all fields before saving.");
   return;
 }
-       catchData.latitude = fishingLocation ? fishingLocation.latitude : null;
-catchData.longitude = fishingLocation ? fishingLocation.longitude : null;
-
+      
 createCatch(catchData);
 console.log(catchData);
 window.location.href = "my-catches.html";
