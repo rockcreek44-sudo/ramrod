@@ -111,7 +111,7 @@ const FISH_STAGE = [
     "Winter"
 ];
 const STORAGE_KEY = "twoDegreeBaitsCatches";
-let fishingLocation = null;
+
 function saveCatch(catchData) {
     catches.push(catchData);
     localStorage.setItem(STORAGE_KEY, JSON.stringify(catches));
@@ -158,8 +158,7 @@ waterClarity: document.getElementById("waterClarity").value,
             weather: document.getElementById("weather").value,
             wind: document.getElementById("wind").value,
         lure: document.getElementById("lure").value,
-            latitude: null,
-longitude: null,
+            
         };
 
         if (
@@ -194,9 +193,7 @@ lastCatch.waterTemp + "<br>" +
 lastCatch.wind + " | " + lastCatch.weather + "<br>" +
 lastCatch.waterClarity + "<br>" +
 lastCatch.lure + "<br><br>" +
-'<a href="https://www.google.com/maps?q=' +
-lastCatch.latitude + "," + lastCatch.longitude +
-'" target="_blank">VIEW ON MAP</a>';
+
 }
     const totalFishElement = document.getElementById("totalFish");
 
