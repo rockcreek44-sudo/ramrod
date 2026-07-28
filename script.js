@@ -179,7 +179,7 @@ catchData.weather === "Select Weather" ||
 createCatch(catchData);
 console.log(catchData);
 window.location.href = "my-catches.html";
-
+});
 const lastCatchElement = document.getElementById("lastCatch");
 
 if (lastCatchElement && catches.length > 0) {
