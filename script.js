@@ -148,6 +148,7 @@ const saveButton = document.getElementById("saveCatch");
 
 if (saveButton) {
     saveButton.addEventListener("click", function() {
+    console.log("SAVE BUTTON FIRED");
         const catchData = {
            species: document.getElementById("species").value,
 weight: document.getElementById("weight").value,
