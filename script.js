@@ -111,7 +111,7 @@ const FISH_STAGE = [
     "Winter"
 ];
 const STORAGE_KEY = "twoDegreeBaitsCatches";
-
+let fishingLocation = null;
 function saveCatch(catchData) {
     catches.push(catchData);
     localStorage.setItem(STORAGE_KEY, JSON.stringify(catches));
@@ -148,7 +148,6 @@ const saveButton = document.getElementById("saveCatch");
 
 if (saveButton) {
     saveButton.addEventListener("click", function() {
-    console.log("SAVE BUTTON FIRED");
         const catchData = {
            species: document.getElementById("species").value,
 weight: document.getElementById("weight").value,
@@ -158,7 +157,8 @@ waterClarity: document.getElementById("waterClarity").value,
             weather: document.getElementById("weather").value,
             wind: document.getElementById("wind").value,
         lure: document.getElementById("lure").value,
-            
+            latitude: null,
+longitude: null,
         };
 
         if (
@@ -179,7 +179,7 @@ catchData.weather === "Select Weather" ||
 createCatch(catchData);
 console.log(catchData);
 window.location.href = "my-catches.html";
-});
+
 const lastCatchElement = document.getElementById("lastCatch");
 
 if (lastCatchElement && catches.length > 0) {
@@ -192,8 +192,10 @@ lastCatch.weight + " | " + lastCatch.length + "<br><br>" +
 lastCatch.waterTemp + "<br>" +
 lastCatch.wind + " | " + lastCatch.weather + "<br>" +
 lastCatch.waterClarity + "<br>" +
-lastCatch.lure + "<br><br>" 
-
+lastCatch.lure + "<br><br>" +
+'<a href="https://www.google.com/maps?q=' +
+lastCatch.latitude + "," + lastCatch.longitude +
+'" target="_blank">VIEW ON MAP</a>';
 }
     const totalFishElement = document.getElementById("totalFish");
 
@@ -294,5 +296,3 @@ if (enterButton) {
         window.location.href = "dashboard.html";
     });
 }
-    
-
