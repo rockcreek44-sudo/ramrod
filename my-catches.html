@@ -53,7 +53,10 @@ LOG ANOTHER CATCH
   BACK TO DASHBOARD
 </button>
 
-<button style="margin-top: 12px;" class="enter-button" type="button" onclick="if(confirm('Are you sure? This will delete all catches.')){localStorage.removeItem('twoDegreeBaitsCatches');window.location.href='my-catches.html';}">CLEAR ALL CATCHES
+<button style="margin-top: 12px;" class="enter-button" type="button" onclick="const saved=JSON.parse(localStorage.getItem('twoDegreeBaitsCatches')||'[]');if(saved.length&&confirm('Delete the last catch?')){saved.pop();localStorage.setItem('twoDegreeBaitsCatches',JSON.stringify(saved));window.location.reload();}">
+DELETE LAST CATCH
+</button>
+            <button style="margin-top: 12px;" class="enter-button" type="button" onclick="if(confirm('Are you sure? This will delete all catches.')){localStorage.removeItem('twoDegreeBaitsCatches');window.location.href='my-catches.html';}">CLEAR ALL CATCHES
 </button>
         </section>
     </main>
