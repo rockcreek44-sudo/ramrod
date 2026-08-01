@@ -142,6 +142,45 @@ window.getCatches = getCatches;
 window.createCatch = createCatch;
 window.saveCatch = saveCatch;
 console.log("2° Baits app loaded");
+const WATER_STORAGE_KEY = "ramrodWaters";
+const waterSelect = document.getElementById("waterName");
+
+if (waterSelect) {
+    const savedWaters = JSON.parse(localStorage.getItem(WATER_STORAGE_KEY) || "[]");
+
+    savedWaters.forEach(function(water) {
+        const option = document.createElement("option");
+        option.value = water;
+        option.textContent = water;
+        waterSelect.insertBefore(option, waterSelect.lastElementChild);
+    });
+
+    waterSelect.addEventListener("change", function() {
+        if (waterSelect.value !== "add-water") return;
+
+        const waterName = window.prompt("Enter water name:");
+
+        if (!waterName || !waterName.trim()) {
+            waterSelect.value = "Select Water";
+            return;
+        }
+
+        const cleanName = waterName.trim();
+        const waters = JSON.parse(localStorage.getItem(WATER_STORAGE_KEY) || "[]");
+
+        if (!waters.includes(cleanName)) {
+            waters.push(cleanName);
+            localStorage.setItem(WATER_STORAGE_KEY, JSON.stringify(waters));
+
+            const option = document.createElement("option");
+            option.value = cleanName;
+            option.textContent = cleanName;
+            waterSelect.insertBefore(option, waterSelect.lastElementChild);
+        }
+
+        waterSelect.value = cleanName;
+    });
+}
 const saveButton = document.getElementById("saveCatch");
 
 
