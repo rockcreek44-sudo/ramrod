@@ -195,10 +195,7 @@ lastCatch.weight + " | " + lastCatch.length + "<br><br>" +
 lastCatch.waterTemp + "<br>" +
 lastCatch.wind + " | " + lastCatch.weather + "<br>" +
 lastCatch.waterClarity + "<br>" +
-lastCatch.lure + "<br><br>" +
-'<a href="https://www.google.com/maps?q=' +
-lastCatch.latitude + "," + lastCatch.longitude +
-'" target="_blank">VIEW ON MAP</a>';
+lastCatch.lure;
 }
     const totalFishElement = document.getElementById("totalFish");
 
