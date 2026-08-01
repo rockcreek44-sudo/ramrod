@@ -188,7 +188,8 @@ const saveButton = document.getElementById("saveCatch");
 if (saveButton) {
     saveButton.addEventListener("click", function() {
         const catchData = {
-           species: document.getElementById("species").value,
+           waterName: document.getElementById("waterName").value,
+            species: document.getElementById("species").value,
 weight: document.getElementById("weight").value,
 length: document.getElementById("length").value,
 waterTemp: document.getElementById("waterTemp").value,
@@ -201,7 +202,8 @@ longitude: null,
         };
 
         if (
-  catchData.species === "Select Species" ||
+  catchData.waterName === "Select Water" ||
+            catchData.species === "Select Species" ||
   catchData.weight === "Select Weight" ||
  catchData.length === "Select Length" ||
 catchData.waterTemp === "Select Water Temp" ||
@@ -229,7 +231,8 @@ if (lastCatchElement && catches.length > 0) {
 
  lastCatchElement.innerHTML =
     (lastCatch.dateCaught ? lastCatch.dateCaught + "<br><br>" : "") +
-    lastCatch.species + "<br>" +
+    (lastCatch.waterName ? lastCatch.waterName + "<br>" : "") +
+     lastCatch.species + "<br>" +
 lastCatch.weight + " | " + lastCatch.length + "<br><br>" +
 lastCatch.waterTemp + "<br>" +
 lastCatch.wind + " | " + lastCatch.weather + "<br>" +
@@ -322,7 +325,8 @@ if (recentCatchesElement && catches.length > 0) {
 
     recentCatchesElement.innerHTML = recentCatches.map((catchData) =>
     (catchData.dateCaught ? catchData.dateCaught + "<br>" : "") +
-    catchData.species + "<br>" +
+    (catchData.waterName ? catchData.waterName + "<br>" : "") +
+        catchData.species + "<br>" +
     catchData.weight + " | " + catchData.length + "<br>" +
     catchData.lure + "<br><br>────────<br><br>"
 ).join("");
