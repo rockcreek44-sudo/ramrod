@@ -55,7 +55,7 @@ const LENGTHS = [
     '27"',
     '28"',
     '29"',
-    '30"+'
+    "30"
 ];
 
 const WATER_TEMPS = [
@@ -179,6 +179,9 @@ catchData.weather === "Select Weather" ||
 createCatch(catchData);
 console.log(catchData);
 window.location.href = "my-catches.html";
+
+        });
+}
 
 const lastCatchElement = document.getElementById("lastCatch");
 
