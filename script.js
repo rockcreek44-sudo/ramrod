@@ -352,18 +352,48 @@ if (topWaterElement && catches.length > 0) {
     }
 }
 const recentCatchesElement = document.getElementById("recentCatches");
+const waterFilter = document.getElementById("waterFilter");
 
-if (recentCatchesElement && catches.length > 0) {
-    const recentCatches = catches.slice(-5).reverse();
+function renderRecentCatches(selectedWater) {
+    const filteredCatches = selectedWater === "all"
+        ? catches
+        : catches.filter((catchData) => catchData.waterName === selectedWater);
+
+    const recentCatches = filteredCatches.slice(-5).reverse();
+
+    if (recentCatches.length === 0) {
+        recentCatchesElement.textContent = "No catches for this water.";
+        return;
+    }
 
     recentCatchesElement.innerHTML = recentCatches.map((catchData) =>
-    (catchData.dateCaught ? catchData.dateCaught + "<br>" : "") +
-    (catchData.waterName ? catchData.waterName + "<br>" : "") +
+        (catchData.dateCaught ? catchData.dateCaught + "<br>" : "") +
+        (catchData.waterName ? catchData.waterName + "<br>" : "") +
         catchData.species + "<br>" +
-    catchData.weight + " | " + catchData.length + "<br>" +
-    catchData.lure + "<br><br>────────<br><br>"
-).join("");
-    
+        catchData.weight + " | " + catchData.length + "<br>" +
+        catchData.lure + "<br><br>────────<br><br>"
+    ).join("");
+}
+
+if (recentCatchesElement && catches.length > 0) {
+    const availableWaters = [...new Set(
+        catches.map((catchData) => catchData.waterName).filter(Boolean)
+    )];
+
+    if (waterFilter) {
+        availableWaters.forEach((water) => {
+            const option = document.createElement("option");
+            option.value = water;
+            option.textContent = water;
+            waterFilter.appendChild(option);
+        });
+
+        waterFilter.addEventListener("change", function() {
+            renderRecentCatches(waterFilter.value);
+        });
+    }
+
+    renderRecentCatches("all");
 }
 const enterButton = document.getElementById("enterButton");
 
