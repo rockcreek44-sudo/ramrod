@@ -329,29 +329,28 @@ if (lureNames.length > 0) {
     topLureElement.textContent = topLure + " — " + lureCounts[topLure] + " fish";
 }
 }
-const topSpeciesElement = document.getElementById("topSpecies");
+const topWaterElement = document.getElementById("topWater");
 
-if (topSpeciesElement && catches.length > 0) {
-    const speciesCounts = {};
+if (topWaterElement && catches.length > 0) {
+    const waterCounts = {};
 
     catches.forEach((catchData) => {
-        if (catchData.species && catchData.species !== "Select Species") {
-            speciesCounts[catchData.species] = (speciesCounts[catchData.species] || 0) + 1;
+        if (catchData.waterName) {
+            waterCounts[catchData.waterName] = (waterCounts[catchData.waterName] || 0) + 1;
         }
     });
 
-    const speciesNames = Object.keys(speciesCounts);
+    const waterNames = Object.keys(waterCounts);
 
-    if (speciesNames.length > 0) {
-        const topSpecies = speciesNames.reduce((top, species) =>
-            speciesCounts[species] > speciesCounts[top] ? species : top
+    if (waterNames.length > 0) {
+        const topWater = waterNames.reduce((top, water) =>
+            waterCounts[water] > waterCounts[top] ? water : top
         );
 
-        topSpeciesElement.textContent =
-            topSpecies + " — " + speciesCounts[topSpecies] + " fish";
+        topWaterElement.textContent =
+            topWater + " — " + waterCounts[topWater] + " fish";
     }
 }
-
 const recentCatchesElement = document.getElementById("recentCatches");
 
 if (recentCatchesElement && catches.length > 0) {
