@@ -371,6 +371,7 @@ function renderRecentCatches(selectedWater) {
         (catchData.waterName ? catchData.waterName + "<br>" : "") +
         catchData.species + "<br>" +
         catchData.weight + " | " + catchData.length + "<br>" +
+        (catchData.waterClarity ? catchData.waterClarity + "<br>" : "") +
         catchData.lure + "<br><br>────────<br><br>"
     ).join("");
 }
