@@ -156,6 +156,40 @@ if (waterSelect) {
     });
 
     waterSelect.addEventListener("change", function() {
+        if (waterSelect.value === "remove-water") {
+    const waters = JSON.parse(localStorage.getItem(WATER_STORAGE_KEY) || "[]");
+
+    if (!waters.length) {
+        alert("No saved waters to remove.");
+        waterSelect.value = "Select Water";
+        return;
+    }
+
+    const choice = window.prompt(
+        "Enter the number of the water to remove:\n" +
+        waters.map(function(water, index) {
+            return (index + 1) + ". " + water;
+        }).join("\n")
+    );
+
+    const index = parseInt(choice, 10) - 1;
+
+    if (index < 0 || index >= waters.length) {
+        waterSelect.value = "Select Water";
+        return;
+    }
+
+    const removedWater = waters.splice(index, 1)[0];
+    localStorage.setItem(WATER_STORAGE_KEY, JSON.stringify(waters));
+
+    Array.from(waterSelect.options).forEach(function(option) {
+        if (option.value === removedWater) option.remove();
+    });
+
+    waterSelect.value = "Select Water";
+    alert(removedWater + " removed.");
+    return;
+}
         if (waterSelect.value !== "add-water") return;
 
         const waterName = window.prompt("Enter water name:");
