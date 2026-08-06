@@ -58,6 +58,12 @@ LOG ANOTHER CATCH
 <button id="backupCatches" style="margin-top: 12px;" class="enter-button" type="button">
     BACK UP CATCHES
 </button>
+
+         <input id="restoreFile" type="file" accept=".json,application/json" hidden>
+
+<button id="restoreBackup" style="margin-top: 12px;" class="enter-button" type="button">
+    RESTORE BACKUP
+</button>   
          <button style="margin-top: 12px;" class="enter-button" type="button" onclick="const saved=JSON.parse(localStorage.getItem('twoDegreeBaitsCatches')||'[]');if(saved.length&&confirm('Delete the last catch?')){saved.pop();localStorage.setItem('twoDegreeBaitsCatches',JSON.stringify(saved));window.location.reload();}">
 DELETE LAST CATCH
 </button>
