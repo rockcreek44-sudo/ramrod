@@ -413,3 +413,31 @@ if (enterButton) {
         window.location.href = "dashboard.html";
     });
 }
+
+const backupButton = document.getElementById("backupCatches");
+
+if (backupButton) {
+    backupButton.addEventListener("click", function() {
+        const backupData = {
+            version: 1,
+            exportedAt: new Date().toISOString(),
+            catches: JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]"),
+            waters: JSON.parse(localStorage.getItem("ramrodWaters") || "[]")
+        };
+
+        const backupBlob = new Blob(
+            [JSON.stringify(backupData, null, 2)],
+            { type: "application/json" }
+        );
+        const backupUrl = URL.createObjectURL(backupBlob);
+        const downloadLink = document.createElement("a");
+
+        downloadLink.href = backupUrl;
+        downloadLink.download = "ramrod-backup-" + new Date().toISOString().slice(0, 10) + ".json";
+        document.body.appendChild(downloadLink);
+        downloadLink.click();
+        downloadLink.remove();
+
+        setTimeout(() => URL.revokeObjectURL(backupUrl), 1000);
+    });
+}
