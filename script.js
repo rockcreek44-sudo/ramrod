@@ -377,6 +377,8 @@ function renderRecentCatches(selectedWater) {
         (catchData.waterName ? catchData.waterName + "<br>" : "") +
         catchData.species + "<br>" +
         catchData.weight + " | " + catchData.length + "<br>" +
+        (catchData.waterTemp ? catchData.waterTemp + "<br>" : "") +
+        (catchData.wind || catchData.weather ? [catchData.wind, catchData.weather].filter(Boolean).join(" | ") + "<br>" : "") +
         (catchData.waterClarity ? catchData.waterClarity + "<br>" : "") +
         catchData.lure + "<br>" +
 (catchData.notes ? "Notes: " + catchData.notes.replaceAll("<", "&lt;").replaceAll(">", "&gt;") + "<br>" : "") +
