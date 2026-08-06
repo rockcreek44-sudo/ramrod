@@ -231,6 +231,7 @@ waterClarity: document.getElementById("waterClarity").value,
             weather: document.getElementById("weather").value,
             wind: document.getElementById("wind").value,
         lure: document.getElementById("lure").value,
+                    notes: document.getElementById("notes").value.trim(),
             latitude: null,
 longitude: null,
         };
