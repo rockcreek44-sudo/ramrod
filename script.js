@@ -441,3 +441,52 @@ if (backupButton) {
         setTimeout(() => URL.revokeObjectURL(backupUrl), 1000);
     });
 }
+
+const restoreButton = document.getElementById("restoreBackup");
+const restoreFileInput = document.getElementById("restoreFile");
+
+if (restoreButton && restoreFileInput) {
+    restoreButton.addEventListener("click", function() {
+        restoreFileInput.click();
+    });
+
+    restoreFileInput.addEventListener("change", function() {
+        const backupFile = restoreFileInput.files[0];
+
+        if (!backupFile) {
+            return;
+        }
+
+        const reader = new FileReader();
+
+        reader.addEventListener("load", function() {
+            try {
+                const backupData = JSON.parse(reader.result);
+
+                if (
+                    !backupData ||
+                    !Array.isArray(backupData.catches) ||
+                    !Array.isArray(backupData.waters)
+                ) {
+                    throw new Error("Invalid backup");
+                }
+
+                if (!confirm("Restore this backup? Current catches and saved waters will be replaced.")) {
+                    restoreFileInput.value = "";
+                    return;
+                }
+
+                localStorage.setItem(STORAGE_KEY, JSON.stringify(backupData.catches));
+                localStorage.setItem("ramrodWaters", JSON.stringify(backupData.waters));
+
+                alert("RAMROD backup restored.");
+                window.location.reload();
+            } catch (error) {
+                alert("That is not a valid RAMROD backup file.");
+                restoreFileInput.value = "";
+            }
+        });
+
+        reader.readAsText(backupFile);
+    });
+}
