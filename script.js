@@ -273,6 +273,11 @@ lastCatch.waterTemp + "<br>" +
 lastCatch.wind + " | " + lastCatch.weather + "<br>" +
 lastCatch.waterClarity + "<br>" +
 lastCatch.lure;
+    if (lastCatch.notes) {
+        const notesElement = document.createElement("div");
+        notesElement.textContent = "Notes: " + lastCatch.notes;
+        lastCatchElement.appendChild(notesElement);
+    }
 }
     const totalFishElement = document.getElementById("totalFish");
 
