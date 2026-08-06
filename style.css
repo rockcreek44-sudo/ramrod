@@ -32,7 +32,8 @@ body {
 transform-origin: center top;
 }
 
-select {
+select,
+textarea {
    width: 100%;
     min-height: 56px;
     margin: 6px 0 10px;
