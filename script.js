@@ -391,6 +391,32 @@ if (topLureHereElement) {
         topLureHereElement.style.display = "block";
     }
 }
+    const weatherCounts = {};
+
+filteredCatches.forEach((catchData) => {
+    if (!catchData.weather) return;
+    weatherCounts[catchData.weather] = (weatherCounts[catchData.weather] || 0) + 1;
+});
+
+if (bestWeatherHereElement) {
+    if (selectedWater === "all") {
+        bestWeatherHereElement.style.display = "none";
+    } else {
+        const bestWeather = Object.keys(weatherCounts).reduce((best, weather) =>
+            !best || weatherCounts[weather] > weatherCounts[best] ? weather : best,
+            null
+        );
+
+        if (bestWeather) {
+            bestWeatherHereElement.textContent =
+                "BEST WEATHER HERE: " + bestWeather + " — " + weatherCounts[bestWeather] + " fish";
+        } else {
+            bestWeatherHereElement.textContent = "BEST WEATHER HERE: No weather data yet.";
+        }
+
+        bestWeatherHereElement.style.display = "block";
+    }
+}
     const recentCatches = filteredCatches.slice(-5).reverse();
 
     if (recentCatches.length === 0) {
