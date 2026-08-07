@@ -360,6 +360,7 @@ if (topWaterElement && catches.length > 0) {
 const recentCatchesElement = document.getElementById("recentCatches");
 const waterFilter = document.getElementById("waterFilter");
 const topLureHereElement = document.getElementById("topLureHere");
+const bestWeatherHereElement = document.getElementById("bestWeatherHere");
 function renderRecentCatches(selectedWater) {
     const filteredCatches = selectedWater === "all"
         ? catches
