@@ -364,7 +364,32 @@ function renderRecentCatches(selectedWater) {
     const filteredCatches = selectedWater === "all"
         ? catches
         : catches.filter((catchData) => catchData.waterName === selectedWater);
+const lureCounts = {};
 
+filteredCatches.forEach((catchData) => {
+    if (!catchData.lure) return;
+    lureCounts[catchData.lure] = (lureCounts[catchData.lure] || 0) + 1;
+});
+
+if (topLureHereElement) {
+    if (selectedWater === "all") {
+        topLureHereElement.style.display = "none";
+    } else {
+        const topLure = Object.keys(lureCounts).reduce((best, lure) =>
+            !best || lureCounts[lure] > lureCounts[best] ? lure : best,
+            null
+        );
+
+        if (topLure) {
+            topLureHereElement.textContent =
+                "TOP LURE HERE: " + topLure + " — " + lureCounts[topLure] + " fish";
+        } else {
+            topLureHereElement.textContent = "TOP LURE HERE: No lure data yet.";
+        }
+
+        topLureHereElement.style.display = "block";
+    }
+}
     const recentCatches = filteredCatches.slice(-5).reverse();
 
     if (recentCatches.length === 0) {
