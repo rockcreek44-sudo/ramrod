@@ -427,7 +427,7 @@ if (bestWeatherHereElement) {
         (catchData.dateCaught ? catchData.dateCaught + "<br>" : "") +
         (catchData.waterName ? catchData.waterName + "<br>" : "") +
         catchData.species + "<br>" +
-        catchData.weight + " | " + catchData.length + "<br>" +
+        (Math.floor(Number(catchData.weight)) + " lb " + Math.round((Number(catchData.weight) % 1) * 16) + " oz") + " | " + catchData.length + "<br>" +
         (catchData.waterTemp ? catchData.waterTemp + "<br>" : "") +
         (catchData.wind || catchData.weather ? [catchData.wind, catchData.weather].filter(Boolean).join(" | ") + "<br>" : "") +
         (catchData.waterClarity ? catchData.waterClarity + "<br>" : "") +
