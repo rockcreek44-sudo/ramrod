@@ -622,3 +622,24 @@ if (restoreButton && restoreFileInput) {
         reader.readAsText(backupFile);
     });
 }
+
+const startTripButton = document.getElementById("startTripButton");
+
+if (startTripButton) {
+    startTripButton.addEventListener("click", function() {
+        const activeTrip = JSON.parse(localStorage.getItem("ramrodActiveTrip") || "null");
+
+        if (activeTrip) {
+            alert("A trip is already active.");
+            return;
+        }
+
+        const newTrip = {
+            id: Date.now().toString(),
+            startedAt: new Date().toISOString()
+        };
+
+        localStorage.setItem("ramrodActiveTrip", JSON.stringify(newTrip));
+        alert("Trip started.");
+    });
+}
