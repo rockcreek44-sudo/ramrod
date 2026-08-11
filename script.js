@@ -127,8 +127,10 @@ function loadCatches() {
 
 loadCatches();
 function createCatch(data) {
+    const activeTrip = JSON.parse(localStorage.getItem("ramrodActiveTrip") || "null");
     const newCatch = {
         ...data,
+        tripId: activeTrip ? activeTrip.id : null,
         id: Date.now(),
 dateCaught: new Date().toLocaleString()
     };
