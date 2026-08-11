@@ -362,6 +362,7 @@ const topLureHereElement = document.getElementById("topLureHere");
 const bestWeatherHereElement = document.getElementById("bestWeatherHere");
 const bestClarityHereElement = document.getElementById("bestClarityHere");
 const bestWindHereElement = document.getElementById("bestWindHere");
+const bestTempHereElement = document.getElementById("bestTempHere");
 function renderRecentCatches(selectedWater) {
     const filteredCatches = selectedWater === "all"
         ? catches
