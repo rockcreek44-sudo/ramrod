@@ -268,8 +268,7 @@ if (lastCatchElement && catches.length > 0) {
     (lastCatch.dateCaught ? lastCatch.dateCaught + "<br><br>" : "") +
     (lastCatch.waterName ? lastCatch.waterName + "<br>" : "") +
      lastCatch.species + "<br>" +
-lastCatch.weight + " | " + lastCatch.length + "<br><br>" +
-lastCatch.waterTemp + "<br>" +
+(Math.floor(Number(lastCatch.weight)) + " lb " + Math.round((Number(lastCatch.weight) % 1) * 16) + " oz") + " | " + lastCatch.length + "<br><br>" +lastCatch.waterTemp + "<br>" +
 lastCatch.wind + " | " + lastCatch.weather + "<br>" +
 lastCatch.waterClarity + "<br>" +
 lastCatch.lure;
