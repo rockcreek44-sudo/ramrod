@@ -417,6 +417,32 @@ if (bestWeatherHereElement) {
         bestWeatherHereElement.style.display = "block";
     }
 }
+    const clarityCounts = {};
+
+filteredCatches.forEach((catchData) => {
+    if (!catchData.waterClarity) return;
+    clarityCounts[catchData.waterClarity] = (clarityCounts[catchData.waterClarity] || 0) + 1;
+});
+
+if (bestClarityHereElement) {
+    if (selectedWater === "all") {
+        bestClarityHereElement.style.display = "none";
+    } else {
+        const bestClarity = Object.keys(clarityCounts).reduce((best, clarity) =>
+            !best || clarityCounts[clarity] > clarityCounts[best] ? clarity : best,
+            null
+        );
+
+        if (bestClarity) {
+            bestClarityHereElement.textContent =
+                "BEST WATER CLARITY HERE: " + bestClarity + " — " + clarityCounts[bestClarity] + " fish";
+        } else {
+            bestClarityHereElement.textContent = "BEST WATER CLARITY HERE: No clarity data yet.";
+        }
+
+        bestClarityHereElement.style.display = "block";
+    }
+}
     const recentCatches = filteredCatches.slice(-5).reverse();
 
     if (recentCatches.length === 0) {
