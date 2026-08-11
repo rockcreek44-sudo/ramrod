@@ -308,7 +308,7 @@ if (biggestFishElement && catches.length > 0) {
 });
   biggestFishElement.innerHTML =
     biggestFish.species + "<br>" +
-    biggestFish.weight + "<br>" +
+    (Math.floor(Number(biggestFish.weight)) + " lb " + Math.round((Number(biggestFish.weight) % 1) * 16) + " oz") + "<br>" +
     biggestFish.length + "<br>" +
     biggestFish.weather + "<br>" +
       biggestFish.lure;
