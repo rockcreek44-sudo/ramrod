@@ -643,3 +643,26 @@ if (startTripButton) {
         alert("Trip started.");
     });
 }
+
+const endTripButton = document.getElementById("endTripButton");
+
+if (endTripButton) {
+    endTripButton.addEventListener("click", function() {
+        const activeTrip = JSON.parse(localStorage.getItem("ramrodActiveTrip") || "null");
+
+        if (!activeTrip) {
+            alert("No active trip.");
+            return;
+        }
+
+        const savedTrips = JSON.parse(localStorage.getItem("ramrodTrips") || "[]");
+
+        activeTrip.endedAt = new Date().toISOString();
+        savedTrips.push(activeTrip);
+
+        localStorage.setItem("ramrodTrips", JSON.stringify(savedTrips));
+        localStorage.removeItem("ramrodActiveTrip");
+
+        alert("Trip ended.");
+    });
+}
