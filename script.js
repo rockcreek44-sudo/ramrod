@@ -673,16 +673,18 @@ const tripHistoryElement = document.getElementById("tripHistory");
 
 if (tripHistoryElement) {
     const savedTrips = JSON.parse(localStorage.getItem("ramrodTrips") || "[]");
+    
 
     if (savedTrips.length > 0) {
         tripHistoryElement.innerHTML = savedTrips
             .slice()
             .reverse()
             .map((trip) => {
+                const tripCatches = catches.filter((catchData) => catchData.tripId === trip.id);
                 const started = trip.startedAt ? new Date(trip.startedAt).toLocaleString() : "Unknown start";
                 const ended = trip.endedAt ? new Date(trip.endedAt).toLocaleString() : "Unknown end";
 
-                return started + "<br>" + ended + "<br><br>";
+                return started + "<br>" + ended + "<br>" + tripCatches.length + " fish<br><br>";
             })
             .join("");
     }
