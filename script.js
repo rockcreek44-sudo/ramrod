@@ -444,6 +444,32 @@ if (bestClarityHereElement) {
         bestClarityHereElement.style.display = "block";
     }
 }
+    const windCounts = {};
+
+filteredCatches.forEach((catchData) => {
+    if (!catchData.wind) return;
+    windCounts[catchData.wind] = (windCounts[catchData.wind] || 0) + 1;
+});
+
+if (bestWindHereElement) {
+    if (selectedWater === "all") {
+        bestWindHereElement.style.display = "none";
+    } else {
+        const bestWind = Object.keys(windCounts).reduce((best, wind) =>
+            !best || windCounts[wind] > windCounts[best] ? wind : best,
+            null
+        );
+
+        if (bestWind) {
+            bestWindHereElement.textContent =
+                "BEST WIND HERE: " + bestWind + " — " + windCounts[bestWind] + " fish";
+        } else {
+            bestWindHereElement.textContent = "BEST WIND HERE: No wind data yet.";
+        }
+
+        bestWindHereElement.style.display = "block";
+    }
+}
     const recentCatches = filteredCatches.slice(-5).reverse();
 
     if (recentCatches.length === 0) {
