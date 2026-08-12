@@ -28,7 +28,7 @@ body {
     width: 100%;
     max-width: 560px;
     text-align: center;
-    transform: scale(1.08);
+    transform: translateY(-8px) scale(1.08);
 transform-origin: center top;
 }
 
