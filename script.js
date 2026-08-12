@@ -722,7 +722,8 @@ const tripDurationText = tripDurationHours > 0
     tripDate + "<br>START: " + started + "<br>END: " + ended + "<br>" + tripDurationText + "<br>" +
     '<span class="trip-water-name">' + tripWaterText + "</span><br>" +
     "TOP LURE: " + (tripTopLure || "No lure recorded") + "<br>" +
-    tripCatches.length + " fish<br>" +
+    "BIGGEST FISH: " + Math.floor(biggestFishOunces / 16) + " lb " + (biggestFishOunces % 16) + " oz<br>" +
+                  tripCatches.length + " fish<br>" +
     '<span class="trip-best-five">BEST 5: ' + bestFivePounds + " lb " + bestFiveRemainingOunces + " oz</span>" +
     "</div>";
             })
