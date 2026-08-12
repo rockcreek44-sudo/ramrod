@@ -705,9 +705,11 @@ const tripDurationText = tripDurationHours > 0
     ? tripDurationHours + " hr " + tripDurationRemainderMinutes + " min"
     : tripDurationRemainderMinutes + " min";
 
-               return started + "<br>" + ended + "<br>" + tripDurationText + "<br>" + tripWaterText + "<br>" +
+              return '<div class="trip-history-item">' +
+    started + "<br>" + ended + "<br>" + tripDurationText + "<br>" + tripWaterText + "<br>" +
     tripCatches.length + " fish<br>" +
-    "BEST 5: " + bestFivePounds + " lb " + bestFiveRemainingOunces + " oz<br><br>";
+    "BEST 5: " + bestFivePounds + " lb " + bestFiveRemainingOunces + " oz" +
+    "</div>";
             })
             .join("");
     }
