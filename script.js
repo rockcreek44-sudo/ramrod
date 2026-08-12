@@ -708,7 +708,7 @@ const tripDurationText = tripDurationHours > 0
               return '<div class="trip-history-item">' +
     started + "<br>" + ended + "<br>" + tripDurationText + "<br>" + tripWaterText + "<br>" +
     tripCatches.length + " fish<br>" +
-    "BEST 5: " + bestFivePounds + " lb " + bestFiveRemainingOunces + " oz" +
+    '<span class="trip-best-five">BEST 5: ' + bestFivePounds + " lb " + bestFiveRemainingOunces + " oz</span>" +
     "</div>";
             })
             .join("");
