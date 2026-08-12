@@ -666,6 +666,7 @@ if (endTripButton) {
         localStorage.removeItem("ramrodActiveTrip");
 
         alert("Trip ended.");
+        window.location.reload();
     });
 }
 
