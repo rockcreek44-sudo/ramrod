@@ -703,3 +703,26 @@ const bestFiveRemainingOunces = bestFiveOunces % 16;
             .join("");
     }
 }
+
+const deleteLastTripButton = document.getElementById("deleteLastTripButton");
+
+if (deleteLastTripButton) {
+    deleteLastTripButton.addEventListener("click", function() {
+        const savedTrips = JSON.parse(localStorage.getItem("ramrodTrips") || "[]");
+
+        if (savedTrips.length === 0) {
+            alert("No trips to delete.");
+            return;
+        }
+
+        const confirmed = confirm("Delete the most recent trip? Your catches will NOT be deleted.");
+
+        if (!confirmed) return;
+
+        savedTrips.pop();
+        localStorage.setItem("ramrodTrips", JSON.stringify(savedTrips));
+
+        alert("Last trip deleted.");
+        window.location.reload();
+    });
+}
