@@ -202,4 +202,6 @@ h2 {
 
 .trip-history-item {
     margin-bottom: 24px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #666;
 }
