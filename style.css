@@ -22,6 +22,12 @@ body {
         url("dashboard-bg.png") center / cover no-repeat fixed;
 }
 
+.set-the-hook-page {
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.58), rgba(0, 0, 0, 0.58)),
+        url("set-the-hook-bg.png") center / cover no-repeat fixed;
+}
+
 .app-shell {
     min-height: 100vh;
     display: flex;
