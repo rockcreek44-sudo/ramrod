@@ -706,7 +706,8 @@ const tripDurationText = tripDurationHours > 0
     : tripDurationRemainderMinutes + " min";
 
               return '<div class="trip-history-item">' +
-    started + "<br>" + ended + "<br>" + tripDurationText + "<br>" + tripWaterText + "<br>" +
+    started + "<br>" + ended + "<br>" + tripDurationText + "<br>" +
+'<span class="trip-water-name">' + tripWaterText + "</span><br>" +
     tripCatches.length + " fish<br>" +
     '<span class="trip-best-five">BEST 5: ' + bestFivePounds + " lb " + bestFiveRemainingOunces + " oz</span>" +
     "</div>";
