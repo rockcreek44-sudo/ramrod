@@ -693,8 +693,9 @@ const tripWaterText = tripWaters.length ? tripWaters.join(" / ") : "No water rec
 const bestFiveOunces = tripWeightsOz.reduce((total, ounces) => total + ounces, 0);
 const bestFivePounds = Math.floor(bestFiveOunces / 16);
 const bestFiveRemainingOunces = bestFiveOunces % 16;
-                const started = trip.startedAt ? new Date(trip.startedAt).toLocaleString() : "Unknown start";
-                const ended = trip.endedAt ? new Date(trip.endedAt).toLocaleString() : "Unknown end";
+                const tripDate = trip.startedAt ? new Date(trip.startedAt).toLocaleDateString() : "Unknown date";
+const started = trip.startedAt ? new Date(trip.startedAt).toLocaleTimeString([], { hour: "numeric", minute: "2-digit" }) : "Unknown start";
+const ended = trip.endedAt ? new Date(trip.endedAt).toLocaleTimeString([], { hour: "numeric", minute: "2-digit" }) : "Unknown end";
                 const tripDurationMinutes = trip.startedAt && trip.endedAt
     ? Math.max(0, Math.round((new Date(trip.endedAt) - new Date(trip.startedAt)) / 60000))
     : 0;
@@ -706,7 +707,7 @@ const tripDurationText = tripDurationHours > 0
     : tripDurationRemainderMinutes + " min";
 
               return '<div class="trip-history-item">' +
-    started + "<br>" + ended + "<br>" + tripDurationText + "<br>" +
+    tripDate + "<br>START: " + started + "<br>END: " + ended + "<br>" + tripDurationText + "<br>" +
 '<span class="trip-water-name">' + tripWaterText + "</span><br>" +
     tripCatches.length + " fish<br>" +
     '<span class="trip-best-five">BEST 5: ' + bestFivePounds + " lb " + bestFiveRemainingOunces + " oz</span>" +
