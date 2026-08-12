@@ -18,7 +18,7 @@ body {
 
 .dashboard-page {
     background:
-        linear-gradient(rgba(0, 0, 0, 0.58), rgba(0, 0, 0, 0.58)),
+        linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
         url("dashboard-bg.png") center / cover no-repeat fixed;
 }
 
