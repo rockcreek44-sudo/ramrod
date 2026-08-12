@@ -27,8 +27,8 @@ padding: 24px 24px;}
     width: 100%;
     max-width: 560px;
     text-align: center;
-    transform: translateY(-8px) scale(1.08);
-transform-origin: center top;
+transform: scale(1.04);
+    transform-origin: center top;
 }
 
 select,
