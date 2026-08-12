@@ -146,7 +146,7 @@ h2 {
 .enter-button {
     width: 100%;
     min-height: 64px;
-    border: 1px solid #ff3b3b;
+    border: 1px solid #b8b8b8;
     border-radius: 14px;
     background: linear-gradient(180deg, #ff2a2a 0%, #d00000 48%, #970000 100%);
 color: #ffffff;
