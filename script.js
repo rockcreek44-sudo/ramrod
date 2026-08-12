@@ -681,10 +681,20 @@ if (tripHistoryElement) {
             .reverse()
             .map((trip) => {
                 const tripCatches = catches.filter((catchData) => catchData.tripId === trip.id);
+                const tripWeightsOz = tripCatches
+    .map((catchData) => Math.round(parseFloat(catchData.weight) * 16))
+    .filter(Number.isFinite)
+    .sort((a, b) => b - a)
+    .slice(0, 5);
+
+const bestFiveOunces = tripWeightsOz.reduce((total, ounces) => total + ounces, 0);
+const bestFivePounds = Math.floor(bestFiveOunces / 16);
+const bestFiveRemainingOunces = bestFiveOunces % 16;
                 const started = trip.startedAt ? new Date(trip.startedAt).toLocaleString() : "Unknown start";
                 const ended = trip.endedAt ? new Date(trip.endedAt).toLocaleString() : "Unknown end";
 
-                return started + "<br>" + ended + "<br>" + tripCatches.length + " fish<br><br>";
+                return started + "<br>" + ended + "<br>" + tripCatches.length + " fish<br>" +
+    "BEST 5: " + bestFivePounds + " lb " + bestFiveRemainingOunces + " oz<br><br>";
             })
             .join("");
     }
