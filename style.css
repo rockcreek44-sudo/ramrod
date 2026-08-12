@@ -16,6 +16,12 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.dashboard-page {
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.58), rgba(0, 0, 0, 0.58)),
+        url("dashboard-bg.png") center / cover no-repeat fixed;
+}
+
 .app-shell {
     min-height: 100vh;
     display: flex;
