@@ -684,6 +684,7 @@ if (tripHistoryElement) {
                 const tripCatches = catches.filter((catchData) => catchData.tripId === trip.id);
                 const tripWaters = [...new Set(tripCatches.map((catchData) => catchData.waterName).filter(Boolean))];
 const tripWaterText = tripWaters.length ? tripWaters.join(" / ") : "No water recorded";
+                const tripLures = tripCatches.map((catchData) => catchData.lure).filter(Boolean);
                 const tripWeightsOz = tripCatches
     .map((catchData) => Math.round(parseFloat(catchData.weight) * 16))
     .filter(Number.isFinite)
