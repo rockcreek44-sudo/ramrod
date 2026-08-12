@@ -695,8 +695,17 @@ const bestFivePounds = Math.floor(bestFiveOunces / 16);
 const bestFiveRemainingOunces = bestFiveOunces % 16;
                 const started = trip.startedAt ? new Date(trip.startedAt).toLocaleString() : "Unknown start";
                 const ended = trip.endedAt ? new Date(trip.endedAt).toLocaleString() : "Unknown end";
+                const tripDurationMinutes = trip.startedAt && trip.endedAt
+    ? Math.max(0, Math.round((new Date(trip.endedAt) - new Date(trip.startedAt)) / 60000))
+    : 0;
 
-               return started + "<br>" + ended + "<br>" + tripWaterText + "<br>" +
+const tripDurationHours = Math.floor(tripDurationMinutes / 60);
+const tripDurationRemainderMinutes = tripDurationMinutes % 60;
+const tripDurationText = tripDurationHours > 0
+    ? tripDurationHours + " hr " + tripDurationRemainderMinutes + " min"
+    : tripDurationRemainderMinutes + " min";
+
+               return started + "<br>" + ended + "<br>" + tripDurationText + "<br>" + tripWaterText + "<br>" +
     tripCatches.length + " fish<br>" +
     "BEST 5: " + bestFivePounds + " lb " + bestFiveRemainingOunces + " oz<br><br>";
             })
