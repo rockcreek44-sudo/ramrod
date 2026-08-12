@@ -682,6 +682,8 @@ if (tripHistoryElement) {
             .reverse()
             .map((trip) => {
                 const tripCatches = catches.filter((catchData) => catchData.tripId === trip.id);
+                const tripWaters = [...new Set(tripCatches.map((catchData) => catchData.waterName).filter(Boolean))];
+const tripWaterText = tripWaters.length ? tripWaters.join(" / ") : "No water recorded";
                 const tripWeightsOz = tripCatches
     .map((catchData) => Math.round(parseFloat(catchData.weight) * 16))
     .filter(Number.isFinite)
@@ -694,7 +696,8 @@ const bestFiveRemainingOunces = bestFiveOunces % 16;
                 const started = trip.startedAt ? new Date(trip.startedAt).toLocaleString() : "Unknown start";
                 const ended = trip.endedAt ? new Date(trip.endedAt).toLocaleString() : "Unknown end";
 
-                return started + "<br>" + ended + "<br>" + tripCatches.length + " fish<br>" +
+               return started + "<br>" + ended + "<br>" + tripWaterText + "<br>" +
+    tripCatches.length + " fish<br>" +
     "BEST 5: " + bestFivePounds + " lb " + bestFiveRemainingOunces + " oz<br><br>";
             })
             .join("");
