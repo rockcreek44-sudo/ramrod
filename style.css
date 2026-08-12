@@ -149,8 +149,8 @@ h2 {
     min-height: 72px;
     border: 1px solid #ff3b3b;
     border-radius: 14px;
-    background: linear-gradient(180deg, #ef1717, #a90000);
-    color: #ffffff;
+    background: linear-gradient(180deg, #ff2a2a 0%, #d00000 48%, #970000 100%);
+color: #ffffff;
     font-size: 1.1rem;
     font-weight: 900;
     letter-spacing: 0.14em;
