@@ -698,7 +698,11 @@ const tripWaterText = tripWaters.length ? tripWaters.join(" / ") : "No water rec
     .sort((a, b) => b - a)
     .slice(0, 5);
 
-const bestFiveOunces = tripWeightsOz.reduce((total, ounces) => total + ounces, 0);
+const biggestFishOunces = tripCatches
+    .map((catchData) => Math.round(parseFloat(catchData.weight) * 16))
+    .filter(Number.isFinite)
+    .reduce((biggest, ounces) => Math.max(biggest, ounces), 0);
+                const bestFiveOunces = tripWeightsOz.reduce((total, ounces) => total + ounces, 0);
 const bestFivePounds = Math.floor(bestFiveOunces / 16);
 const bestFiveRemainingOunces = bestFiveOunces % 16;
                 const tripDate = trip.startedAt ? new Date(trip.startedAt).toLocaleDateString() : "Unknown date";
