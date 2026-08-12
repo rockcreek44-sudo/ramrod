@@ -689,6 +689,9 @@ const tripWaterText = tripWaters.length ? tripWaters.join(" / ") : "No water rec
     counts[lure] = (counts[lure] || 0) + 1;
     return counts;
 }, {});
+               const tripTopLure = Object.keys(tripLureCounts).reduce((topLure, lure) =>
+    !topLure || tripLureCounts[lure] > tripLureCounts[topLure] ? lure : topLure
+, "");
                 const tripWeightsOz = tripCatches
     .map((catchData) => Math.round(parseFloat(catchData.weight) * 16))
     .filter(Number.isFinite)
