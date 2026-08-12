@@ -38,6 +38,12 @@ body {
         linear-gradient(rgba(255, 255, 255, 0.20), rgba(255, 255, 255, 0.20)),
         url("my-trips-bg.png") center / cover no-repeat fixed;
 }
+
+.about-bg-page {
+    background:
+        linear-gradient(rgba(255, 255, 255, 0.20), rgba(255, 255, 255, 0.20)),
+        url("about-bg.png") center / cover no-repeat fixed;
+}
 .app-shell {
     min-height: 100vh;
     display: flex;
