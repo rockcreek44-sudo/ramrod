@@ -242,3 +242,10 @@ color: #ffffff;
 .trip-water-name {
     font-weight: bold;
 }
+
+@media (max-width: 600px) {
+    .dashboard-page {
+        background-size: contain;
+        background-color: #000;
+    }
+}
