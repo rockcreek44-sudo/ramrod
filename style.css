@@ -255,10 +255,19 @@ color: #ffffff;
     width: min(55vw, 220px);
 }
 .set-the-hook-page {
+    background: #000;
+    position: relative;
+}
+
+    .set-the-hook-page::before {
+    content: "";
+    position: fixed;
+    inset: 0;
     background:
         linear-gradient(rgba(255, 255, 255, 0.20), rgba(255, 255, 255, 0.20)),
-       url("set-the-hook-bg.png") center top / contain repeat-y;
-    background-color: #000;
+        url("set-the-hook-bg.png") center center / cover no-repeat;
+    z-index: -1;
+}
 }
     
 }
