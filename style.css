@@ -254,4 +254,11 @@ color: #ffffff;
     .logo {
     width: min(55vw, 220px);
 }
+.set-the-hook-page {
+    background:
+        linear-gradient(rgba(255, 255, 255, 0.20), rgba(255, 255, 255, 0.20)),
+        url("set-the-hook-bg.png") center top / contain no-repeat;
+    background-color: #000;
+}
+    
 }
