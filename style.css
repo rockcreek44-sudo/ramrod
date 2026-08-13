@@ -79,10 +79,9 @@ select option {
 
 .field-card {
     margin-bottom: 14px;
-    padding: 12px 10px;
-background: rgba(0, 0, 0, 0.35);
-border: 1px solid rgba(255, 255, 255, 0.15);
-border-radius: 12px;
+   padding: 0;
+background: none;
+border: none;
 }
 
 .field-card p, .field-label {
