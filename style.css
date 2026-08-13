@@ -250,4 +250,8 @@ color: #ffffff;
             url("dashboard-bg.png") center top / contain no-repeat;
         background-color: #000;
     }
+
+    .logo {
+    width: min(55vw, 220px);
+}
 }
