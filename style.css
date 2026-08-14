@@ -58,9 +58,18 @@ body {
 }
 
 .about-bg-page {
+    background: #000;
+    position: relative;
+}
+
+.about-bg-page::before {
+    content: "";
+    position: fixed;
+    inset: 0;
     background:
         linear-gradient(rgba(255, 255, 255, 0.20), rgba(255, 255, 255, 0.20)),
-        url("about-bg.png") center / cover no-repeat fixed;
+        url("about-bg.png") center center / cover no-repeat;
+    z-index: -1;
 }
 .app-shell {
     min-height: 100vh;
