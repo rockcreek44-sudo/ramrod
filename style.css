@@ -28,9 +28,18 @@ body {
         url("set-the-hook-bg.png") center / cover no-repeat fixed;
 }
 .my-catches-page {
+    background: #000;
+    position: relative;
+}
+
+.my-catches-page::before {
+    content: "";
+    position: fixed;
+    inset: 0;
     background:
         linear-gradient(rgba(255, 255, 255, 0.20), rgba(255, 255, 255, 0.20)),
-        url("my-catches-bg.png") center / cover no-repeat fixed;
+        url("my-catches-bg.png") center center / cover no-repeat;
+    z-index: -1;
 }
 
 .my-trips-page {
